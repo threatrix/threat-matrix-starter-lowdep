@@ -1,0 +1,52 @@
+/******************************************************************************
+ *
+ * Copyright (c) 2018, the Perspective Authors.
+ *
+ * This file is part of the Perspective library, distributed under the terms of
+ * the Apache License 2.0.  The full license can be found in the LICENSE file.
+ *
+ */
+
+@import "../../../../node_modules/@lumino/widgets/style/index.css";
+
+:host {
+    @import "./tabbar.less";
+    @import "./dockpanel.less";
+    @import "./widget.less";
+
+    background-color: hsl(210deg 18% 90%);
+
+    width: 100%;
+    height: 100%;
+
+    .workspace {
+        width: 100%;
+        height: 100%;
+    }
+
+    .p-SplitPanel {
+        height: 100%;
+        width: 100%;
+    }
+
+    div.p-SplitPanel-handle {
+        background-color: inherit; //var(--master-divider--background-color);
+    }
+
+    .master-panel {
+        background-color: var(--workspace-master--background-color, inherit);
+        padding: 0px 0px 0px 0px;
+
+        .viewer-container {
+            border-width: 0px;
+        }
+    }
+
+    .perspective-workspace.context-menu * .p-SplitPanel-handle {
+        opacity: 0.2;
+    }
+
+    .perspective-workspace.context-menu > .p-SplitPanel-handle {
+        opacity: 0.2;
+    }
+}
